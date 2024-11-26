@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Hall Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="aui_logo.png" alt="AUI Logo" class="logo">
+        <h1>Dining Hall Feedback System</h1>
+    </header>
+
+    <main>
+        <!-- Feedback Form -->
+        <form id="feedbackForm">
+            <label for="studentId">University ID</label>
+            <input type="text" id="studentId" placeholder="Enter your University ID" required>
+
+            <label for="diningService">Dining Service</label>
+            <select id="diningService" required>
+                <option value="Proxy">Proxy</option>
+                <option value="Cafeteria">Cafeteria</option>
+                <option value="Italian Restaurant">Italian Restaurant</option>
+                <option value="COSA">COSA</option>
+                <option value="American">American</option>
+            </select>
+
+            <label for="mealName">Meal Name</label>
+            <input type="text" id="mealName" placeholder="Enter the meal name" required>
+
+            <label>Rate Your Meal</label>
+            <div class="rating">
+                <input type="radio" name="star" id="star5" value="5">
+                <label for="star5">★</label>
+                <input type="radio" name="star" id="star4" value="4">
+                <label for="star4">★</label>
+                <input type="radio" name="star" id="star3" value="3">
+                <label for="star3">★</label>
+                <input type="radio" name="star" id="star2" value="2">
+                <label for="star2">★</label>
+                <input type="radio" name="star" id="star1" value="1">
+                <label for="star1">★</label>
+            </div>
+
+            <label for="comment">Leave a Comment</label>
+            <textarea id="comment" placeholder="Share your thoughts about the meal"></textarea>
+
+            <div>
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <label for="anonymous">Submit feedback anonymously</label>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+            <h2>Other Feedback</h2>
+        </section>
+
+        <!-- Admin Tools -->
+        <section class="admin-section">
+            <h2>Administrative Tools</h2>
+            <label for="adminId">Enter Admin ID</label>
+            <input type="password" id="adminId" placeholder="Admin ID">
+            <button id="exportFeedback">Download Feedback Data</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
